@@ -1,0 +1,45 @@
+﻿@using EntityLayer.Concrete;
+@model List<Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>ListCustomer</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Şifre</th>
+                <th>Telefon</th>
+                <th>Email</th>
+                <th>Adres</th>
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.UserId</td>
+                    <th>@item.Name</th>
+                    <td>@item.Surname</td>
+                    <td>@item.Password</td>
+                    <td>@item.PhoneNo</td>
+                    <td>@item.Email</td>
+                    <td>@item.Address</td>
+                </tr>
+            }
+        </table>
+        <br />
+        <a class="btn-primary" href="AddCustomer">Müşteri Ekle</a>
+    </div>
+</body>
+</html>

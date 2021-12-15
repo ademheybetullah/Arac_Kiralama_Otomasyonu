@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -175,6 +176,8 @@
     <Content Include="Views\Car\ListCar.cshtml" />
     <Content Include="Views\Company\AddCompany.cshtml" />
     <Content Include="Views\Company\ListCompany.cshtml" />
+    <Content Include="Views\Customer\AddCustomer.cshtml" />
+    <Content Include="Views\Customer\ListCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
