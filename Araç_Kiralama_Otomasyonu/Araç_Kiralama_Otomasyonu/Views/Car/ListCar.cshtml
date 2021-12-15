@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete;
+@model List<Car>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>ListCar</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Marka</th>
+                <th>Sirket Id</th>
+                <th>Min ehliyet yaşı</th>
+                <th>Min yaş</th>
+                <th>Koltuk Sayısı</th>
+                <th>Araç Kategorisi</th>
+                <th>Km</th>
+                <th>Kiralama Bedeli</th>
+                <th>Kiralama Durumu</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CarId</td>
+                    <td>@item.Model</td>
+                    <td>@item.Brand</td>
+                    <td>@item.CompanyId</td>
+                    <td>@item.MinDrivingLicenseAge</td>
+                    <td>@item.MinAge</td>
+                    <td>@item.Seats</td>
+                    <td>@item.CarCategory</td>
+                    <td>@item.InstantKm</td>
+                    <td>@item.RentalFee</td>
+                    <td>@item.RentalStatus</td>
+                </tr>
+            }
+        </table>
+        <br />
+        <a class="btn-primary" href="AddCar">Araç Ekle</a>
+    </div>
+</body>
+</html>
