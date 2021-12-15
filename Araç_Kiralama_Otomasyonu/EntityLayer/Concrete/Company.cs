@@ -23,7 +23,7 @@ namespace EntityLayer.Concrete
         [Required]
         public int CarCount { get; set; }
         public Decimal CompanyScore { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-        public ICollection<Car> Cars { get; set; }
+        public List<Employee> Employees { get; set; }
+        public List<Car> Cars { get; set; }
     }
 }

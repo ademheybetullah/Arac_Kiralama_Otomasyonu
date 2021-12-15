@@ -7,6 +7,5 @@ C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\bin\Debug\Enti
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
-C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\EntityLayer\obj\Debug\EntityLayer.pdb

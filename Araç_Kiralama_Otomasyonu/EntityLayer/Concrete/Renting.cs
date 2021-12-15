@@ -27,7 +27,7 @@ namespace EntityLayer.Concrete
         public int CarId { get; set; }
         [Required]
         public int UserId { get; set; }
-        public virtual Customer Customer { get; set; }
-        public virtual Car Car { get; set; }
+        public Customer Customer { get; set; }
+        public Car Car { get; set; }
     }
 }

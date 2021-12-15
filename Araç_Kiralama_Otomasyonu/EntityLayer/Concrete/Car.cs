@@ -39,7 +39,7 @@ namespace EntityLayer.Concrete
         public decimal RentalFee { get; set; }
         [Required]
         public bool RentalStatus { get; set; }
-        public virtual Company Company { get; set; }
-        public ICollection<Renting> Rentings { get; set; }
+        public Company Company { get; set; }
+        public List<Renting> Rentings { get; set; }
     }
 }

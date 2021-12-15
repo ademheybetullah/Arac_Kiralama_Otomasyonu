@@ -12,3 +12,4 @@ C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\DataAccessLayer\obj\Debug\
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete

@@ -30,6 +30,6 @@ namespace EntityLayer.Concrete
         [StringLength(50, MinimumLength = 4)]
         [Required]
         public string Email { get; set; }
-        public virtual Company Company { get; set; }
+        public Company Company { get; set; }
     }
 }

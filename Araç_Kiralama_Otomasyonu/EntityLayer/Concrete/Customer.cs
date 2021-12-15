@@ -29,7 +29,7 @@ namespace EntityLayer.Concrete
         [StringLength(500, MinimumLength = 2)]
         [Required]
         public string Address { get; set; }
-        public ICollection<Renting> Rentings { get; set; }
+        public List<Renting> Rentings { get; set; }
 
     }
 }

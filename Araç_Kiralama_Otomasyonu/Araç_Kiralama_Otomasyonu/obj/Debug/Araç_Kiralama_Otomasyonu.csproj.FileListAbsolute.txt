@@ -96,3 +96,4 @@ C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\Araç_Kiralama_Otomasyonu\
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\Araç_Kiralama_Otomasyonu\obj\Debug\Araç_Kiralama_Otomasyonu.csproj.CoreCompileInputs.cache
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\Araç_Kiralama_Otomasyonu\obj\Debug\Araç_Kiralama_Otomasyonu.dll
 C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\Araç_Kiralama_Otomasyonu\obj\Debug\Araç_Kiralama_Otomasyonu.pdb
+C:\Users\ademh\source\repos\Araç_Kiralama_Otomasyonu\Araç_Kiralama_Otomasyonu\obj\Debug\Araç_Kiralama_Otomasyonu.csproj.CopyComplete
