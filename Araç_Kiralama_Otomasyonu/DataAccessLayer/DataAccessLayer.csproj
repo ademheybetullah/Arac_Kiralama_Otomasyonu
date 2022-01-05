@@ -54,6 +54,54 @@
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\GenericRepository.cs" />
+    <Compile Include="Migrations\202112170925130_DeleteTable.cs" />
+    <Compile Include="Migrations\202112170925130_DeleteTable.designer.cs">
+      <DependentUpon>202112170925130_DeleteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112170926283_AddReservationTable.cs" />
+    <Compile Include="Migrations\202112170926283_AddReservationTable.designer.cs">
+      <DependentUpon>202112170926283_AddReservationTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112221501454_mig_AddImageTable.cs" />
+    <Compile Include="Migrations\202112221501454_mig_AddImageTable.designer.cs">
+      <DependentUpon>202112221501454_mig_AddImageTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112260942568_migPasswordHashing.cs" />
+    <Compile Include="Migrations\202112260942568_migPasswordHashing.designer.cs">
+      <DependentUpon>202112260942568_migPasswordHashing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112262138310_migAddStatusToEmployee.cs" />
+    <Compile Include="Migrations\202112262138310_migAddStatusToEmployee.designer.cs">
+      <DependentUpon>202112262138310_migAddStatusToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112291744046_addCompanyIdtoRentings.cs" />
+    <Compile Include="Migrations\202112291744046_addCompanyIdtoRentings.designer.cs">
+      <DependentUpon>202112291744046_addCompanyIdtoRentings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112301031419_addCompanyIdtoReservationstbl.cs" />
+    <Compile Include="Migrations\202112301031419_addCompanyIdtoReservationstbl.designer.cs">
+      <DependentUpon>202112301031419_addCompanyIdtoReservationstbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112301348044_addDepositFeetoCartbl.cs" />
+    <Compile Include="Migrations\202112301348044_addDepositFeetoCartbl.designer.cs">
+      <DependentUpon>202112301348044_addDepositFeetoCartbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112301520303_addPaymenttoRestbl.cs" />
+    <Compile Include="Migrations\202112301520303_addPaymenttoRestbl.designer.cs">
+      <DependentUpon>202112301520303_addPaymenttoRestbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112302109291_addSaltToEmployeetbl.cs" />
+    <Compile Include="Migrations\202112302109291_addSaltToEmployeetbl.designer.cs">
+      <DependentUpon>202112302109291_addSaltToEmployeetbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112302154055_addempPasswordLength.cs" />
+    <Compile Include="Migrations\202112302154055_addempPasswordLength.designer.cs">
+      <DependentUpon>202112302154055_addempPasswordLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112311403582_migAddImageToResvandRent.cs" />
+    <Compile Include="Migrations\202112311403582_migAddImageToResvandRent.designer.cs">
+      <DependentUpon>202112311403582_migAddImageToResvandRent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -66,6 +114,44 @@
       <Project>{62fa95d7-9c3d-4bcb-9d13-cb2e4f3ef58b}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202112170925130_DeleteTable.resx">
+      <DependentUpon>202112170925130_DeleteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112170926283_AddReservationTable.resx">
+      <DependentUpon>202112170926283_AddReservationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112221501454_mig_AddImageTable.resx">
+      <DependentUpon>202112221501454_mig_AddImageTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112260942568_migPasswordHashing.resx">
+      <DependentUpon>202112260942568_migPasswordHashing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112262138310_migAddStatusToEmployee.resx">
+      <DependentUpon>202112262138310_migAddStatusToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112291744046_addCompanyIdtoRentings.resx">
+      <DependentUpon>202112291744046_addCompanyIdtoRentings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112301031419_addCompanyIdtoReservationstbl.resx">
+      <DependentUpon>202112301031419_addCompanyIdtoReservationstbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112301348044_addDepositFeetoCartbl.resx">
+      <DependentUpon>202112301348044_addDepositFeetoCartbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112301520303_addPaymenttoRestbl.resx">
+      <DependentUpon>202112301520303_addPaymenttoRestbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112302109291_addSaltToEmployeetbl.resx">
+      <DependentUpon>202112302109291_addSaltToEmployeetbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112302154055_addempPasswordLength.resx">
+      <DependentUpon>202112302154055_addempPasswordLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112311403582_migAddImageToResvandRent.resx">
+      <DependentUpon>202112311403582_migAddImageToResvandRent.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

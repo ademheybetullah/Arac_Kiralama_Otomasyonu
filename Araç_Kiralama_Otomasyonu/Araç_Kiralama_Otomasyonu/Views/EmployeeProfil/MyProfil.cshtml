@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Scripts/Css/ViewProfileForEmployee.css" rel="stylesheet" />
+    <link href="~/Scripts/Css/Navbar.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>MyProfil</title>
+</head>
+<body>
+    @Html.Partial("EmployeeNavbar")
+    <div style="margin-bottom:70px" id="Kutu">
+        <div id="CalisanIconDiv">
+            <img src="~/Scripts/Icons/calisan.png" id="CalisanIcon">
+        </div>
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/Id.png" id="IdIcon">
+        </div>
+        <div class="Degisken">
+            @Session["EmployeeId"]
+        </div>
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/Ad.png" id="AdIcon">
+        </div>
+        <div class="Degisken">
+            @Session["Name"]
+        </div>
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/Soyad.png" id="SoyadIcon">
+        </div>
+        <div class="Degisken">
+            @Session["Surname"]
+        </div>
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/Eposta.png" id="EpostaIcon">
+        </div>
+        <div class="Degisken">
+            @Session["Email"]
+        </div>
+
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/TelefonNumarasi.png" id="TelefonNumarasiIcon">
+        </div>
+        <div class="Degisken">
+            @Session["PhoneNo"]
+        </div>
+        <div class="IconDiv">
+            <img src="~/Scripts/Icons/Adres.png" id="AdresIcon">
+        </div>
+        <div class="Degisken">
+            @Session["Adress"]
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>

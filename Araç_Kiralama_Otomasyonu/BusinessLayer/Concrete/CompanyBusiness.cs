@@ -15,6 +15,10 @@ namespace BusinessLayer.Concrete
         {
             return repo.List();
         }
+        public Company GetById(int id)
+        {
+            return repo.Get(x=>x.CompanyId==id);
+        }
         public void DeleteCompany(Company company)
         {
             repo.Delete(company);

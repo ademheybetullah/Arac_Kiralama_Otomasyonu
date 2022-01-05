@@ -38,8 +38,12 @@ namespace EntityLayer.Concrete
         [Required]
         public decimal RentalFee { get; set; }
         [Required]
+        public decimal DepositFee { get; set; }
+        [Required]
         public bool RentalStatus { get; set; }
         public Company Company { get; set; }
         public List<Renting> Rentings { get; set; }
+        public List<Reservation> Reservations { get; set; }
+        public List<Image> Images { get; set; }
     }
 }

@@ -11,9 +11,9 @@ namespace BusinessLayer.Concrete
     public class CarBusiness
     {
         GenericRepository<Car> repo = new GenericRepository<Car>();
-        public List<Car> GetCarList()
+        public List<Car> GetCarList(int id)
         {
-            return repo.List();
+            return repo.ListById(x => x.CompanyId==id);
         }
         public void DeleteCar(Car car)
         {
@@ -26,6 +26,14 @@ namespace BusinessLayer.Concrete
         public void CarUpdate(Car car)
         {
             repo.Update(car);
+        }
+        public List<Car> ListAllCar()
+        {
+            return repo.List();
+        }
+        public Car GetCarById(int id)
+        {
+            return repo.Get(x => x.CarId == id);
         }
     }
 }

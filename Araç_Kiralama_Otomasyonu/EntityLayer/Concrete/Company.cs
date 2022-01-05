@@ -25,5 +25,7 @@ namespace EntityLayer.Concrete
         public Decimal CompanyScore { get; set; }
         public List<Employee> Employees { get; set; }
         public List<Car> Cars { get; set; }
+        public List<Renting> Rentings { get; set; }
+        public List<Reservation> Reservations { get; set; }
     }
 }

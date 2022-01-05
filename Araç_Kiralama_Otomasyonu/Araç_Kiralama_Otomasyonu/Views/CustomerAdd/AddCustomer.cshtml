@@ -1,0 +1,68 @@
+﻿@model EntityLayer.Concrete.Customer
+@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>AddCustomer</title>
+    <link href="~/Scripts/Css/CustomerRegister.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login-form">
+        <form action="#">
+            <div class="form-name">
+                Üye Ol
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/Ad.png" id="AdIcon">
+                </div>
+                <input type="text" class="form-control item" name="Name" placeholder="Ad">
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/Soyad.png" id="SoyadIcon">
+                </div>
+                <input type="text" class="form-control item" name="Surname" placeholder="Soyad">
+                @Html.ValidationMessageFor(x => x.Surname)
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/Eposta.png" id="EpostaIcon">
+                </div>
+                <input type="email" class="form-control item" name="Email" placeholder="Email">
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/Sifre.png" id="SifreIcon">
+                </div>
+                <input type="password" class="form-control item" name="Password" placeholder="Şifre">
+                @Html.ValidationMessageFor(x => x.Password)
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/TelefonNumarasi.png" id="TelefonNumarasiIcon">
+                </div>
+                <input type="tel" class="form-control item" name="PhoneNo" placeholder="Telefon numarası">
+                @Html.ValidationMessageFor(x => x.PhoneNo)
+            </div>
+            <div class="form-group">
+                <div class="IconDiv">
+                    <img src="~/Scripts/Icons/Adres.png" id="AdresIcon">
+                </div>
+                <input type="text" class="form-control item" name="Address" placeholder="Adres">
+                @Html.ValidationMessageFor(x => x.Address)
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-block login-account">Üye Ol</button>
+            </div>
+        </form>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

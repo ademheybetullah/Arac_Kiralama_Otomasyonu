@@ -1,0 +1,39 @@
+﻿
+footer {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    position:fixed;
+    bottom:0px;
+    margin-top:50px;
+}
+
+#Ust {
+    height: 32px;
+    background-color: #5C5C5C;
+    color: #cfb53b;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    padding-top: 8px;
+}
+
+#Alt {
+    height: 32px;
+    background-color: #4c4c4c;
+    color: #cfb53b;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    padding-top: 8px;
+}
+
+#UstIcon {
+    position: absolute;
+    margin-top: 4.5px;
+    margin-left: -255px;
+}
+
+#AltIcon {
+    position: absolute;
+    margin-top: 4.5px;
+    margin-left: -175px;
+}

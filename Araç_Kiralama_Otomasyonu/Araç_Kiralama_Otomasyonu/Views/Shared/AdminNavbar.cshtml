@@ -1,0 +1,64 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="header">
+    <div class="header-inner">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-lg my-navbar">
+                <a class="navbar-brand" href="@Url.Action("ListCompany", "CompanyList")">
+                    <img src="~/Scripts/Icons/Icon.png" id="Icon"><span id="Baslik">Hızlı Kirala</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("ListCompany", "CompanyList")">Şirketler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("AddCompany", "CompanyAdd")">Şirket Ekle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("ListStatistics", "Statistics")">İstatistikler</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a href="@Url.Action("MyProfil", "AdminProfil")" class="ProfilLink header-btn my-2 my-sm-0" id="ButonProfil"><img style="width:27px;height:32px" src="~/Scripts/Icons/Admin.png"></a>
+                        <button id="acma" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Logout" style="background-color: #cfb53b ">Çıkış</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="modal" id="Logout">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Çıkış Yap</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Emin misiniz?
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">İptal</button>
+                <a class="btn btn-danger" href="@Url.Action("Logout", "AdminLogout")">Çıkış</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="~/Scripts/JsCodes/JsNavbar.js"></script>
+<link href="~/Scripts/Css/Navbar.css" rel="stylesheet" />
+

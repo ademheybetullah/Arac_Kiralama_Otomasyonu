@@ -17,9 +17,11 @@ namespace EntityLayer.Concrete
         [StringLength(50, MinimumLength = 2)]
         [Required]
         public string Surname { get; set; }
-        [StringLength(50, MinimumLength = 2)]
+        [StringLength(200, MinimumLength = 2)]
         [Required]
         public string Password { get; set; }
+        [Required]
+        public string Salt { get; set; }
         [StringLength(10, MinimumLength = 10)]
         [Required]
         public string PhoneNo { get; set; }
@@ -27,6 +29,9 @@ namespace EntityLayer.Concrete
         [StringLength(500, MinimumLength = 2)]
         [Required]
         public string Address { get; set; }
+        [StringLength(10, MinimumLength = 2)]
+        [Required]
+        public string Status { get; set; }
         [StringLength(50, MinimumLength = 4)]
         [Required]
         public string Email { get; set; }

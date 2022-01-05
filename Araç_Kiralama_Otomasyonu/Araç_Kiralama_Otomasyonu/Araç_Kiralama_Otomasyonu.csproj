@@ -52,7 +52,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.10.3.6\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleCrypto, Version=26.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleCrypto.0.3.30.26\lib\SimpleCrypto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,13 +133,43 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\CompanyController.cs" />
-    <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\AdminLogoutController.cs" />
+    <Compile Include="Controllers\AdminProfilController.cs" />
+    <Compile Include="Controllers\CompanyListController.cs" />
+    <Compile Include="Controllers\CustomerAddController.cs" />
+    <Compile Include="Controllers\CompanyAddController.cs" />
+    <Compile Include="Controllers\CarAddController.cs" />
+    <Compile Include="Controllers\CustomerDashboardController.cs" />
+    <Compile Include="Controllers\CustomerLogoutController.cs" />
+    <Compile Include="Controllers\CustomerProfilController.cs" />
+    <Compile Include="Controllers\EmployeeAddController.cs" />
+    <Compile Include="Controllers\EmployeeListController.cs" />
+    <Compile Include="Controllers\EmployeeLogoutController.cs" />
+    <Compile Include="Controllers\EmployeeProfilController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\RentingsListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CarListController.cs" />
+    <Compile Include="Controllers\LoginAdminController.cs" />
+    <Compile Include="Controllers\LoginEmployeeController.cs" />
+    <Compile Include="Controllers\LoginCustomerController.cs" />
+    <Compile Include="Controllers\RentingAddController.cs" />
+    <Compile Include="Controllers\RentingsUpdateController.cs" />
+    <Compile Include="Controllers\ReservationAddController.cs" />
+    <Compile Include="Controllers\ReservationListController.cs" />
+    <Compile Include="Controllers\ReservationUpdateController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarImageCompanyModel.cs" />
+    <Compile Include="Models\CarModel.cs" />
+    <Compile Include="Models\CompanyEmployee.cs" />
+    <Compile Include="Models\CompanyModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\RentingModel.cs" />
+    <Compile Include="Models\ReservationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,9 +181,43 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resimler\Cars.jpg" />
+    <Content Include="Resimler\Cars2.jpg" />
+    <Content Include="Resimler\Renting.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Css\CssFooter.css" />
+    <Content Include="Scripts\Css\CssHomePage.css" />
+    <Content Include="Scripts\Icons\Ad.png" />
+    <Content Include="Scripts\Icons\Admin.png" />
+    <Content Include="Scripts\Icons\Adres.png" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Icons\Arac.png" />
+    <Content Include="Scripts\Icons\calisan.png" />
+    <Content Include="Scripts\Icons\CompanyId.png" />
+    <Content Include="Scripts\Css\CssAddCar.css" />
+    <Content Include="Scripts\Css\CssAddCompany.css" />
+    <Content Include="Scripts\Css\CssAddEmployee.css" />
+    <Content Include="Scripts\Css\CssAddRenting.css" />
+    <Content Include="Scripts\Css\CssAddReservation.css" />
+    <Content Include="Scripts\Css\CustomerLogin.css" />
+    <Content Include="Scripts\Css\CustomerRegister.css" />
+    <Content Include="Scripts\Css\EmployeeLogin.css" />
+    <Content Include="Scripts\Icons\Eposta.png" />
+    <Content Include="Scripts\Icons\Icon.png" />
+    <Content Include="Scripts\Icons\Id.png" />
+    <Content Include="Scripts\Icons\Musteri.png" />
+    <Content Include="Scripts\Css\Navbar.css" />
+    <Content Include="Scripts\Css\RentingList.css" />
+    <Content Include="Scripts\Icons\Sifre.png" />
+    <Content Include="Scripts\Icons\Sirket.png" />
+    <Content Include="Scripts\Icons\Soyad.png" />
+    <Content Include="Scripts\Css\StartPage.css" />
+    <Content Include="Scripts\Css\style.css" />
+    <Content Include="Scripts\Icons\TelefonNumarasi.png" />
+    <Content Include="Scripts\Css\ViewProfileForAdmin.css" />
+    <Content Include="Scripts\Css\ViewProfileForCustomer.css" />
+    <Content Include="Scripts\Css\ViewProfileForEmployee.css" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -157,6 +227,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JsCodes\JsAddCar.js" />
+    <Content Include="Scripts\JsCodes\JsAddRenting.js" />
+    <Content Include="Scripts\JsCodes\JsAddReservation.js" />
+    <Content Include="Scripts\JsCodes\JsNavbar.js" />
+    <Content Include="Scripts\JsCodes\JsListAllCar.js" />
+    <Content Include="Scripts\JsCodes\JsListCar.js" />
+    <Content Include="Scripts\JsCodes\JSListRentings.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -167,21 +244,38 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Car\AddCar.cshtml" />
-    <Content Include="Views\Car\ListCar.cshtml" />
-    <Content Include="Views\Company\AddCompany.cshtml" />
-    <Content Include="Views\Company\ListCompany.cshtml" />
-    <Content Include="Views\Customer\AddCustomer.cshtml" />
-    <Content Include="Views\Customer\ListCustomer.cshtml" />
+    <Content Include="Views\CarAdd\AddCar.cshtml" />
+    <Content Include="Views\CompanyAdd\AddCompany.cshtml" />
+    <Content Include="Views\CustomerAdd\AddCustomer.cshtml" />
+    <Content Include="Views\LoginEmployee\EmployeeLogin.cshtml" />
+    <Content Include="Views\Shared\EmployeeNavbar.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\CustomerNavbar.cshtml" />
+    <Content Include="Views\RentingAdd\AddRenting.cshtml" />
+    <Content Include="Views\CarList\ListCar.cshtml" />
+    <Content Include="Views\CarList\ListAllCar.cshtml" />
+    <Content Include="Views\CompanyList\ListCompany.cshtml" />
+    <Content Include="Views\CustomerDashboard\Dashboard.cshtml" />
+    <Content Include="Views\LoginAdmin\AdminLogin.cshtml" />
+    <Content Include="Views\LoginCustomer\CustomerLogin.cshtml" />
+    <Content Include="Views\RentingsList\ListRentings.cshtml" />
+    <Content Include="Views\RentingsUpdate\UpdateRenting.cshtml" />
+    <Content Include="Views\ReservationAdd\AddReservation.cshtml" />
+    <Content Include="Views\ReservationList\ListReservations.cshtml" />
+    <Content Include="Views\ReservationUpdate\UpdateReservation.cshtml" />
+    <Content Include="Views\EmployeeAdd\AddEmployee.cshtml" />
+    <Content Include="Views\Shared\AdminNavbar.cshtml" />
+    <Content Include="Views\AdminProfil\MyProfil.cshtml" />
+    <Content Include="Views\CustomerProfil\MyProfil.cshtml" />
+    <Content Include="Views\EmployeeProfil\MyProfil.cshtml" />
+    <Content Include="Views\ErrorPage\Error404.cshtml" />
+    <Content Include="Views\EmployeeList\ListEmployee.cshtml" />
+    <Content Include="Views\Statistics\ListStatistics.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

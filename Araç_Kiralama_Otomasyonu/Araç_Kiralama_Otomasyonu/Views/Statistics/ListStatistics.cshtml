@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>İstatistikler</title>
+    <style>
+        .row {
+            max-width: 1930px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: #CFCFCF;
+        }
+
+        .IconDiv {
+            width: 50px;
+            height: 50px;
+            background-color: #cfb53b;
+            border: none;
+            border-radius: 50px;
+            margin-top: -50px;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+<body>
+    @Html.Partial("AdminNavbar")
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary mb-1">
+                                Toplam Müşteri Sayısı
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.customerCount</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-user" style="font-size:32px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success mb-1">
+                                Toplam Çalışan Sayısı
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.employeeCount</div>
+                        </div>
+                        <div class="col-auto">
+                            <i  class="fa fa-users" style="font-size:32px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-muted mb-1">
+                                Toplam Şirket Sayısı
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.companyCount</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-building-o" style="font-size:32px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-danger mb-1">
+                                Toplam Araç Sayısı
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.carCount</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-car" style="font-size:32px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>
+

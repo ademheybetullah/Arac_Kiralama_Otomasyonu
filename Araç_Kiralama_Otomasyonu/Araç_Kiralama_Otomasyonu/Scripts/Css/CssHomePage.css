@@ -1,0 +1,16 @@
+﻿.carousel {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h3 {
+    color: #4c4c4c;
+    text-align: center;
+    margin-top: 30px;
+}
+
+p {
+    margin-top: 30px;
+}

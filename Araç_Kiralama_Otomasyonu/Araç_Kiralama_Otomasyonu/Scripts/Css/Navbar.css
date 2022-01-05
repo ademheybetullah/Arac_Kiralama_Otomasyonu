@@ -1,0 +1,74 @@
+body {
+	font-family: 'Segoe UI';
+}
+
+#Baslik {
+	background-color: #cfb53b;
+	color: #4c4c4c;
+	font-weight: 500;
+	cursor: default;
+	margin-left: 5px;
+	padding: 2px 3px 2px 3px;
+}
+
+#Icon {
+	cursor: default;
+	margin: -3px 0px 10px 0px;
+}
+
+.fa-bars {
+	color: #cfb53b;
+	margin: 5px 0px 0px 0px;
+}
+
+header {
+	position: relative;
+	width: 100%;
+}
+
+.header-inner {
+	background-color: #4c4c4c;
+}
+
+.nav-item {
+	padding: 5px 20px;
+	display: block;
+}
+
+	.nav-item .nav-link {
+		color: #cfb53b;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 36px;
+		display: block;
+	}
+
+		.nav-item .nav-link:hover {
+			color: #9E9E9E;
+		}
+
+.header-btn {
+	background-color: #cfb53b;
+	color: #4c4c4c;
+	font-size: 15px;
+	font-weight: 500;
+	border: none;
+	border-radius: 30px;
+	outline: none;
+	padding: 7px 22px;
+}
+
+	.header-btn:hover {
+		background-color: #9E9E9E;
+		cursor: pointer;
+	}
+
+.ProfilLink {
+	width: 10px;
+	height: 40px;
+	margin-right: 20px;
+}
+
+#MusteriIcon {
+	margin-left: -13.5px;
+}

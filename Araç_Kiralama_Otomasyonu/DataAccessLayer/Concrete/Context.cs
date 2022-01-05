@@ -16,5 +16,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Renting> Rentings { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }

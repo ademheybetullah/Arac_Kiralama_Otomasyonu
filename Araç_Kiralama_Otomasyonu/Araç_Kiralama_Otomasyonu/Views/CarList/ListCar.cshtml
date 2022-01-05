@@ -1,0 +1,178 @@
+﻿@using EntityLayer.Concrete;
+@using Araç_Kiralama_Otomasyonu.Models;
+@model CarImageCompanyModel
+@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="~/Scripts/Css/Navbar.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ListCar</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#MaxFiyat").on("keyup", function () {
+                var maxFiyat = parseFloat($(this).val());
+                $(".fiyatBilgisi").filter(function () {
+                    var fiyat = parseFloat($(this).text());
+                    if (fiyat > maxFiyat) {
+                        $(this).parent().parent().parent().css({ "display": "none", "visibility": "hidden" });
+                    } else {
+                        $(this).parent().parent().parent().css({ "display": "block", "visibility": "visible" });
+                    }
+                });
+            });
+            $("#MaxDepozito").on("keyup", function () {
+                var maxDeposit = parseFloat($(this).val());
+                $(".depositBilgisi").filter(function () {
+                    var deposit = parseFloat($(this).text());
+                    if (deposit > maxDeposit) {
+                        $(this).parent().parent().parent().css({ "display": "none", "visibility": "hidden" });
+                    } else {
+                        $(this).parent().parent().parent().css({ "display": "block", "visibility": "visible" });
+                    }
+                });
+            });
+            $("#Marka").on("keyup", function () {
+                var marka = $(this).val().toLowerCase();
+                $(".markaBilgisi").filter(function () {
+                    if ($(this).text().toLowerCase().indexOf(marka) > -1) {
+                        $(this).parent().parent().parent().css({ "display": "block", "visibility": "visible" });
+                    } else {
+                        $(this).parent().parent().parent().css({ "display": "none", "visibility": "hidden" });
+                    }
+                });
+            });
+            $(".duzenle").click(function () {
+                $(".list-group").css({ "display": "none", "visibility": "hidden" })
+                $(".duzenleForm").css({ "display": "block", "visibility": "visible" });
+                $(".iptal").css({ "display": "block", "visibility": "visible" });
+                $(".duzenle").css({ "display": "none", "visibility": "hidden" });
+            });
+            $(".iptal").click(function () {
+                $(".duzenleForm").css({ "display": "none", "visibility": "hidden" });
+                $(".list-group").css({ "display": "block", "visibility": "visible" });
+                $(".duzenle").css({ "display": "block", "visibility": "visible" });
+                $(".iptal").css({ "display": "none", "visibility": "hidden" });
+            });
+        });
+    </script>
+    @Html.Partial("EmployeeNavbar")
+    <div style="margin-bottom:70px" class="row">
+        <div class="shadow-sm p-4 mb-4 bg-light border border-2 container mt-3 col-sm-3 p-5">
+            <h5>Filtrele</h5>
+            <div class="input-group mb-3">
+                <span style="background-color: #cfb53b " class="input-group-text">Fiyat max</span>
+                <input type="text" class="form-control" id="MaxFiyat" placeholder="Max Kiralama Bedeli">
+            </div>
+            <div class="input-group mb-3">
+                <span style="background-color: #cfb53b " class="input-group-text">Depozito</span>
+                <input type="text" class="form-control" id="MaxDepozito" placeholder="Max Depozito">
+            </div>
+
+        </div>
+        <div class="container mt-3 col-sm-9 p-5">
+            <div class="row row-cols-1 row-cols-md-4">
+                @foreach (var item in Model.Cars)
+                {
+
+    <div class="shadow-sm p-1 bg-light border border-2 col mb-4">
+        <div class="card">
+            <div class="content-overlay">
+                <img src="@Model.Images.FirstOrDefault(x=>x.CarId==item.CarId).ImagePath" class="card-img-top" alt="Arac Fotosu" height="200" width="200">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><strong>@item.Brand @item.Model</strong></h4>
+                <strong>Kiralama Ücreti</strong> <p class="fiyatBilgisi">@item.RentalFee</p>
+                <strong>Depozito Ücreti</strong><p class="depositBilgisi">@item.DepositFee</p>
+                <button id="acma" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#_@item.CarId" style="background-color: #cfb53b">İncele</button>
+            </div>
+        </div>
+    </div>
+
+                    <div class="modal" id="_@item.CarId">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Araç Bilgisi</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container row">
+                                        @for (int i = 0; i < Model.Images.Where(x => x.CarId == item.CarId).ToArray().Length; i++)
+                                        {
+                        <div class="col-sm-6 p-1">
+                            <img height=auto width=100% src="@Model.Images.Where(x => x.CarId == item.CarId).ToArray()[i].ImagePath" />
+                        </div>}
+
+                                    </div>
+
+                                    <hr>
+                                    <div class="container mt-3">
+                                        <h4>Araç Genel Özellikleri</h4>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><strong>Kategori: </strong>@item.CarCategory</li>
+                                            <li class="list-group-item"><strong>Marka: </strong>@item.Brand</li>
+                                            <li class="list-group-item"><strong>Model: </strong>@item.Model</li>
+                                            <li class="list-group-item"><strong>Kirama Ücreti: </strong>@item.RentalFee</li>
+                                            <li class="list-group-item"><strong>Rezervasyon Ücreti: </strong>@item.DepositFee</li>
+                                            <li class="list-group-item"><strong>Min Ehliyet Yaşı: </strong>@item.MinDrivingLicenseAge</li>
+                                            <li class="list-group-item"><strong>Min Yaş: </strong>@item.MinAge</li>
+                                            <li class="list-group-item"><strong>Kilometre: </strong>@item.InstantKm</li>
+                                            <li class="list-group-item"><strong>Koltuk sayısı: </strong>@item.Seats</li>
+                                        </ul>
+                                        <form style="display: none; visibility: hidden;" class="duzenleForm form-control" method="post">
+                                            <input style="display: none; visibility: hidden;" type="text" class="form-control" name="CarId" id="fourthPhoto" value="@item.CarId" />
+                                            <span style="background-color: #cfb53b " class="input-group-text">Kategori</span>
+                                            <select id="selCarCategory" class="form-control" name="CarCategory">
+                                                <option>Otomobil</option>
+                                                <option>Arazi</option>
+                                                <option>Ticari</option>
+                                            </select>
+                                            <span style="background-color: #cfb53b " class="input-group-text">Marka</span>
+                                            <input type="text" class="form-control" value="@item.Brand" name="Brand">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Model</span>
+                                            <input type="text" class="form-control" value="@item.Model" name="Model">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Kiralama Ücreti</span>
+                                            <input type="text" class="form-control" value="@item.RentalFee" name="RentalFee">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Rezervasyon Ücreti</span>
+                                            <input type="text" class="form-control" value="@item.DepositFee" name="DepositFee">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Min Ehliyet Yaşı</span>
+                                            <input type="text" class="form-control" value="@item.MinDrivingLicenseAge" name="MinDrivingLicenseAge">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Min Yaş</span>
+                                            <input type="text" class="form-control" value="@item.MinAge" name="MinAge">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Min Ehliyet Yaşı</span>
+                                            <input type="text" class="form-control" value="@item.InstantKm" name="InstantKm">
+                                            <span style="background-color: #cfb53b " class="input-group-text">Min Yaş</span>
+                                            <input type="text" class="form-control" value="@item.Seats" name="Seats">
+                                            <br />
+                                            <input type="submit" class="form-control btn-secondary" />
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-success duzenle">Düzenle</button>
+                                    <button style="display: none; visibility: hidden;" class="btn btn-warning iptal">İptal</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>}
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>

@@ -24,10 +24,16 @@ namespace EntityLayer.Concrete
         [Required]
         public int Score { get; set; }
         [Required]
+        [StringLength(250)]
+        public string ImagePath { get; set; }
+        [Required]
         public int CarId { get; set; }
+        [Required]
+        public int CompanyId { get; set; }
         [Required]
         public int UserId { get; set; }
         public Customer Customer { get; set; }
         public Car Car { get; set; }
+
     }
 }

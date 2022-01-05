@@ -1,0 +1,42 @@
+﻿.col {
+    color: #4c4c4c;
+    font-weight: 500;
+    text-align: center;
+}
+
+p {
+    height: 100px;
+    color: #cfb53b;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.gonderBtn {
+    width: 130px;
+    height: 52px;
+    background-color: #4c4c4c;
+    color: #cfb53b;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: -25px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #32353a;
+    color: #9b870c;
+}
+

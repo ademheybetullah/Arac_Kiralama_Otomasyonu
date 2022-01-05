@@ -1,0 +1,42 @@
+﻿p {
+    height: 100px;
+    color: #cfb53b;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+table {
+    background-color: #cfb53b;
+}
+
+th {
+    color: #4c4c4c;
+    text-align: center;
+}
+
+td {
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.listBtn {
+    width: 100px;
+    height: 40px;
+    background-color: #4c4c4c;
+    color: #cfb53b;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: #cfb90b;
+    color: #4c4c4c;
+}
